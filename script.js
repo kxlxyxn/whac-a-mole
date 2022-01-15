@@ -49,8 +49,10 @@ const gameStarter = () => {
     } else if (selectedDifficulty == "Hard") {
         interval = 700;
     }
-    countDown();
-    setInterval(molePopper, interval)
+    if (time == 30) {
+        countDown();
+        setInterval(molePopper, interval)
+    }
 }
 
 startGame.addEventListener("click", gameStarter);
