@@ -74,14 +74,11 @@ let fetchID = (div_id) => clickedSquare = btnArr.indexOf(div_id);
 
 let molePopper = () => {
     rando = Math.floor(Math.random() * (9 - 0)) + 0;
-    console.log(selectedDifficulty)
-    console.log(`random num is ${rando}`)
     document.getElementById(btnArr[rando]).style.backgroundSize = "100%";
     document.getElementById(btnArr[rando]).style.backgroundImage = "url(mole.png)";
     setTimeout(function () {
         if (rando == clickedSquare) {
             score += 1;
-            console.log(`score is ${score}`)
             scoreboard.innerHTML = `<div id="scoreboard"><h1>Score: ${score}</h1></div>`;
             clickedSquare = null;
         } else {
